@@ -116,7 +116,6 @@ activities <- read.csv("train/y_train.txt", header=F, nrows = nrows, col.names =
 ## Read related subject_train.txt into trainSubject and use 'subjectId' ad variable name
 trainSubject <- read.csv("train/subject_train.txt", header=F, nrows = nrows, col.names = 'subjectId') 
 
-
 ##
 ## ----------------------------------------------
 ## Combine subject and activity identifier with the relevant train data
@@ -177,8 +176,10 @@ extract <- select(final, subjectId:activity, contains('mean..'), contains('std..
 ## clean-up, they are not necessary anymore
 rm(final, features)
 
+##
 ## ------------------------------------------
 ## Task 3.  Uses descriptive activity names to name the activities in the data set
+##
 
 activities <- c("walking", "walking upstars", "walking downstairs", "siting", "standing", "laying")
 
@@ -213,3 +214,4 @@ write.table(names(averages), "CodeBook.md", row.name=FALSE, quote=FALSE)
 ##
 
 print ("Done.")
+

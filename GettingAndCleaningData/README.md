@@ -169,7 +169,6 @@ I copied then commented (self documented) run_analysis.R script here. Lets go th
     ##
 
     ## Based on the input data files has fixed with records structure and 
-    ## each column 16 chars wide
     ## each column 16 chars wide 
     ## Generate a vector for 561 of them and store it colWidths
 
@@ -189,7 +188,6 @@ I copied then commented (self documented) run_analysis.R script here. Lets go th
 
     ## Read related subject_train.txt into trainSubject and use 'subjectId' ad variable name
     trainSubject <- read.csv("train/subject_train.txt", header=F, nrows = nrows, col.names = 'subjectId') 
-
 
     ##
     ## ----------------------------------------------
@@ -251,8 +249,10 @@ I copied then commented (self documented) run_analysis.R script here. Lets go th
     ## clean-up, they are not necessary anymore
     rm(final, features)
 
+    ##
     ## ------------------------------------------
     ## Task 3.  Uses descriptive activity names to name the activities in the data set
+    ##
 
     activities <- c("walking", "walking upstars", "walking downstairs", "siting", "standing", "laying")
 
